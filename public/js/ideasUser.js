@@ -4,7 +4,7 @@ $(function () {
         type: "get",
         data: {
             page: 0,
-            size: 3
+            size: 20
         }
     }).then(rs => {
         $('tbody').empty();

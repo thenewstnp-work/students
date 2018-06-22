@@ -1,13 +1,17 @@
 $(function () {
     $("#btn").on("click", () => {
+        const $username = $("#username").val();
+        const $userage = $("#userage").val();
+        const $usersex = $("#usersex").val();
+        const $userclass = $("#userclass").val();
         $.ajax({
             url: "/users/add",
             type: "get",
             data: {
-                username: $("#username").val(),
-                userage: $("#userage").val(),
-                usersex: $("#usersex").val(),
-                userclass: $("#userclass").val(),
+                username: $username,
+                userage: $userage,
+                usersex: $usersex,
+                userclass: $userclass
             },
             success: (data) => {
                 console.log(data);
